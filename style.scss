@@ -1,0 +1,171 @@
+$color1: #6b717f;
+$color2: #fff;
+$color3: #000;
+$color4: #8C8C8C;
+$color5: #BF4080;
+$color6: green;
+$color7: red;
+$color8: orange;
+%alert {
+
+    border: 1px solid #8C8C8C;
+    padding: 16px;
+    color: #fff;
+}
+
+$padding1: 15px;
+
+*{padding: $padding1};
+
+body{
+    color: $color1;
+    background-color: $color2;
+}
+
+article section{
+    border: $color4;
+}
+
+article code{
+    background: $color3;
+    border: $color1;
+}
+
+h1, 
+h2, 
+h3 {
+    color: $color5;
+}
+
+.success,
+.error,
+.warning{
+    border: $color4;
+    color: $color2;
+}
+
+.success{
+    background-color: $color6;
+}
+
+.error{
+    background-color: $color7;
+}
+
+.warning{
+    background-color: $color8;
+}
+
+
+
+
+body{
+
+    font: 100% "Space Mono", monospace;
+    color: #6b717f;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+
+    h1,
+    h2,
+    h3{
+    color: #BF4080;
+}
+    h1{
+    text-align: center;
+}
+    
+    main{
+        padding: /*$padding1*/;
+    
+
+    article{
+        display: flex;
+        flex-wrap: wrap;
+
+        #sellingpoints{
+            flex-grow: 2;
+            flex-basis: 100%;
+        }
+
+    
+        section{
+            flex-grow: 1;
+            flex-basis: 45%;
+            border: 1px #8C8C8C solid;
+            -webkit-box-shadow: 10px 10px 15px -4px #6b717f;
+            -moz-box-shadow: 10px 10px 15px -4px #6b717f;
+            box-shadow: 10px 10px 15px -4px #6b717f;
+            padding: 16px;
+            margin: 16px;
+            clear: both;
+            overflow: auto;
+            box-sizing: border-box;
+
+        code{
+            background: #000;
+    border: 1px solid #6b717f;
+    color: #8C8C8C;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;}
+        
+    .before{
+        float: left;
+        width: 40%;
+    }
+    .after{
+        float: right;
+        width: 40%;
+    }
+}
+
+}
+
+.messages{
+    padding: 16px;
+
+  .success,
+  .error,
+  .warning{
+    border: 1px solid #8C8C8C;
+    padding: 16px;
+    color: #fff;
+  }
+  
+.success{
+    @extend %alert;
+    background-color: green;
+    }
+    .error{
+        @extend %alert;
+        background-color: red;
+       &:hover{
+        background-color: green;
+       }
+    }
+    .warning{
+        @extend %alert;
+        background-color: orange;
+    }
+}
+    
+}
+
+h3{
+    text-align: center;
+    font-size: 1.5em;
+    padding: $padding1 * 2;
+    margin-bottom: 0px;
+
+}
+}
